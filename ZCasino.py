@@ -4,6 +4,7 @@ import time
 argent_joueur = 100
 argent_joueur = float(argent_joueur)
 print("Vous avez",argent_joueur,"$")
+print("Lakhdar!")
 
 continuer_partie = True
 
