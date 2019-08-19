@@ -32,7 +32,7 @@ while continuer_partie:
 	try:
 		nombre_choisi = float(nombre_choisi)	
 	except ValueError:
-		print("\nHé non! Premiere nouvelle", nombre_choisi,"n'est pas un nombre\n")
+		print("\nHé non! Premiere nouvelle:", nombre_choisi,"n'est pas un nombre\n")
 		time.sleep(4)
 		print("C'est malin maintenant le programme va s'arreter!\n")
 		os.system("pause")
