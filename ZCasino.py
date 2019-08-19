@@ -9,7 +9,15 @@ continuer_partie = True
 
 while continuer_partie:
 	mise_joueur = input("\nQuelle sera votre mise?\n")
-	mise_joueur = float(mise_joueur)	
+	
+	try:
+		mise_joueur = float(mise_joueur)	
+	except ValueError:
+		print("Vous ne savez pas faire la difference entre un nombre et des lettres!?\n")
+		time.sleep(2)
+		print("Le programme va s'arreter!\n")
+		os.system("pause")
+			
 	
 	if mise_joueur>argent_joueur:
 		while mise_joueur>argent_joueur:
@@ -20,7 +28,16 @@ while continuer_partie:
 	
 	argent_joueur = argent_joueur-mise_joueur	
 	nombre_choisi = input("\nSur quel nombre misererez-vous?\n")
-	nombre_choisi = float(nombre_choisi)	
+	
+	try:
+		nombre_choisi = float(nombre_choisi)	
+	except ValueError:
+		print("\nHé non! Premiere nouvelle", nombre_choisi,"n'est pas un nombre\n")
+		time.sleep(4)
+		print("C'est malin maintenant le programme va s'arreter!\n")
+		os.system("pause")
+	
+		
 	if nombre_choisi<0 or nombre_choisi>49:
 		while nombre_choisi<0 or nombre_choisi>49:
 			nombre_choisi = input("\nLa roulette ne comporte que 50 nombres de 0 à 49. \nSur quel nombre misererez-vous?\n")
